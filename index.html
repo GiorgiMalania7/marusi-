@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100b19">
+<title>მარუსისთვის ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div><div class="stars"></div><div class="hearts"></div>
+<audio id="music" src="marusi-song.mp3" loop preload="metadata"></audio>
+
+<header class="music-player">
+  <button id="musicBtn" aria-label="მუსიკის ჩართვა">♫</button>
+  <div><strong>შენი პატარა საუნდტრეკი</strong><span id="musicText">დააჭირე, თუ გინდა 🎵</span></div>
+  <div class="eq" id="eq"><i></i><i></i><i></i><i></i></div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="moon"></div>
+  <div class="hero-content reveal">
+    <span class="tiny-label">პატარა ადგილი, რომელიც შენთვის გავაკეთე</span>
+    <h1>ჰეი, <span>მარუსი</span> ♡</h1>
+    <p>ეს საიტი არაფერს გთხოვს.<br>უბრალოდ მინდა რამდენიმე წუთით გაგიღიმო.</p>
+    <button class="primary-btn" id="openBtn">✨ შევიდეთ?</button>
+    <div class="scroll-hint">ნელა ჩამოდი ↓</div>
+  </div>
+</section>
+
+<section class="section message reveal">
+<div class="narrow section-inner">
+<span class="eyebrow">პირველ რიგში...</span>
+<h2>ვიცი, რომ ახლა შეიძლება ყველაფერი ცოტა არეული იყოს.</h2>
+<div class="soft-copy">
+<p>ზოგჯერ შეიძლება საკუთარ თავშიც კი ვერ გაერკვე.</p>
+<p>ზოგჯერ არ იცოდე, რა გინდა, საით მიდიხარ ან რა უნდა გააკეთო.</p>
+<p>ზოგი დღე უბრალოდ მძიმეა.</p>
+<p class="highlight">და ეს ნორმალურია. 🌙</p>
+<p>ყველა პასუხი დღესვე არ უნდა გქონდეს.</p>
+<p>ყველაფრის ერთ დღეში დალაგება არ არის საჭირო.</p>
+<p class="big-line">შეიძლება უბრალოდ ცოტა დაიღალე. 🫂</p>
+</div>
+</div>
+</section>
+
+<section class="section garden">
+<div class="section-inner">
+<span class="eyebrow">პატარა შეხსენება</span>
+<h2>ზოგ რამეს უბრალოდ დრო სჭირდება. 🌱</h2>
+<p class="lead">როგორც ყვავილს. და სხვათა შორის, ვიცი, რომ ყვავილები გიჟურად გიყვარს. ♡</p>
+<div class="garden-card">
+<div class="sky-glow"></div>
+<div class="flower-wrap" id="flower"><div class="stem"></div><div class="leaf leaf-left"></div><div class="leaf leaf-right"></div><div class="flower-head"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></div></div>
+<button class="water-btn" id="waterBtn">💧 მოვრწყათ</button>
+<p class="water-message" id="waterMessage">ალბათ ცოტა ზრუნვა სჭირდება...</p>
+</div>
+<div class="quote"><span>“</span><p>ნელა გაზრდაც ზრდაა.</p><span>”</span></div>
+</div>
+</section>
+
+<section class="section mood">
+<div class="section-inner">
+<span class="eyebrow">ახლა ყველაზე მნიშვნელოვანი კითხვა</span>
+<h2>დღეს როგორ ხარ?</h2>
+<p class="lead">აქ სწორი პასუხი არ არსებობს. აირჩიე ის, რაც ყველაზე მეტად გგავს.</p>
+<div class="moods">
+<button data-mood="sad">🥺<b>ცოტა ცუდად</b><small>მინდა უბრალოდ სიმშვიდე</small></button>
+<button data-mood="lost">🫠<b>დაკარგული</b><small>არ ვიცი რა მინდა</small></button>
+<button data-mood="okay">🙂<b>ნორმალურად</b><small>ნელ-ნელა ვარ</small></button>
+<button data-mood="happy">🌸<b>კარგ ხასიათზე</b><small>დღეს გამომივიდა!</small></button>
+</div>
+<div class="mood-answer" id="moodAnswer">აირჩიე განწყობა ♡</div>
+</div>
+</section>
+
+<section class="section fun">
+<div class="section-inner">
+<span class="eyebrow">კარგი, ახლა სერიოზულობა გვეყოფა</span>
+<h2>მარუსის დღევანდელი მისია 🎀</h2>
+<p class="lead">ეს არის უაღრესად სერიოზული და მეცნიერულად დამტკიცებული სია.</p>
+<div class="mission-card">
+<label><input type="checkbox"><span>წყალი დალიე</span><b>💧</b></label>
+<label><input type="checkbox"><span>რამე გემრიელი ჭამე</span><b>🍓</b></label>
+<label><input type="checkbox"><span>ნორმალურად დაიძინე</span><b>🌙</b></label>
+<label><input type="checkbox"><span>დღეს საკუთარ თავს ნუ ეჩხუბები</span><b>🫶</b></label>
+<label><input type="checkbox"><span>ერთხელ მაინც გაიღიმე</span><b>🌷</b></label>
+</div>
+
+<div class="smile-box">
+<div class="cute-face" id="cuteFace">🥺</div>
+<h3>ბონუს მისია</h3><p>ერთი პატარა ღიმილი შეიძლება?</p>
+<button class="play-btn" id="smileBtn">არა 😐</button>
+<small id="smileHint"></small>
+</div>
+</div>
+</section>
+
+<section class="section animals">
+<div class="section-inner">
+<span class="eyebrow">მნიშვნელოვანი კვლევა</span>
+<h2>ისინი, ვინც მარუსს კანონით უნდა უყვარდეს 🐾</h2>
+<p class="lead">მეცნიერება ამ საკითხზე ცალსახაა.</p>
+<div class="animal-grid">
+<button class="animal-card" data-animal="cat"><div class="animal-art cat-art">🐱</div><strong>კატები</strong><small>პატარა ფუმფულა ქაოსი</small></button>
+<button class="animal-card" data-animal="dog"><div class="animal-art dog-art">🐶</div><strong>ძაღლები</strong><small>ბედნიერების პროფესიონალები</small></button>
+<button class="animal-card" data-animal="flower"><div class="animal-art flower-art">🌷</div><strong>ყვავილები</strong><small>განწყობის მყისიერი ამწევები</small></button>
+</div>
+<div class="animal-note" id="animalNote">აირჩიე კვლევის ობიექტი ↑</div>
+</div>
+</section>
+
+<section class="section hunt">
+<div class="section-inner">
+<span class="eyebrow">დამალული რაღაც</span>
+<h2>იპოვე დამალული კატა 🐈</h2>
+<p class="lead">სადღაც ამ ოთახში იმალება. 10 წამი გაქვს. 👀</p>
+<div class="hunt-area" id="huntArea"><span class="hidden-cat" id="hiddenCat">🐱</span><span class="hunt-text">აქ სადმე უნდა იყოს...</span></div>
+<button class="primary-btn small" id="huntBtn">დავიწყოთ</button>
+<div class="score" id="huntScore"></div>
+</div>
+</section>
+
+<section class="section reminders">
+<div class="section-inner">
+<span class="eyebrow">იმ დღეებისთვის, როცა დაგავიწყდება</span>
+<h2>პატარა შეხსენებები შენთვის</h2>
+<div class="reminder-grid" id="reminderGrid"></div>
+<button class="primary-btn small" id="randomReminder">🎁 მომეცი შემთხვევითი</button>
+<div class="random-result" id="randomResult"></div>
+</div>
+</section>
+
+<section class="section secrets">
+<div class="section-inner">
+<span class="eyebrow">psst... აქ რაღაცებია</span>
+<h2>საიდუმლო კუთხე 🔐</h2>
+<p class="lead">ყველა ნივთს თავისი პატარა საიდუმლო აქვს. დააჭირე.</p>
+<div class="secret-grid">
+<button data-secret="შენ იმაზე ძვირფასი ხარ, ვიდრე შენი ცუდი დღეები გაჯერებს. 🌷">🌸</button>
+<button data-secret="დღეს არაფრის დამტკიცება არ გჭირდება. უბრალოდ იყავი. 🫂">☁️</button>
+<button data-secret="თუ დაიღალე, გაჩერდი. გაჩერება უკან დახევა არ არის. 🌙">🌙</button>
+<button data-secret="ვიღაცას ძალიან უხარია, რომ შენ არსებობ. ♡">✨</button>
+<button data-secret="შენი სიკეთე შენს ყველაზე ლამაზ თვისებებს შორისაა. 🫶">🐾</button>
+<button data-secret="ეს პატარა კუთხე ყოველთვის შეგიძლია ისევ გახსნა. 🎀">🎀</button>
+</div>
+<div class="secret-message" id="secretMessage">აირჩიე რომელიმე... ♡</div>
+</div>
+</section>
+
+<section class="section final">
+<div class="final-glow"></div>
+<div class="narrow section-inner reveal">
+<span class="tiny-label">და ბოლოს...</span>
+<h2>თუ ოდესმე დაგავიწყდა, ეს გახსოვდეს:</h2>
+<div class="final-message">
+<p>არ არის აუცილებელი ზუსტად იცოდე, საით მიდიხარ.</p>
+<p>არ არის აუცილებელი ყველაფერი დღესვე დაალაგო.</p>
+<p>შეგიძლია ნელა იარო.</p>
+<p>შეგიძლია დაისვენო.</p>
+<p>შეგიძლია თავიდან დაიწყო.</p>
+<p class="strong">და შენ აბსოლუტურად გაქვს უფლება, ბედნიერი იყო. ♡</p>
+</div>
+<div class="final-divider">✦</div>
+<p class="quiet">არ გთხოვ არაფერს. უბრალოდ მინდა, რომ საკუთარ თავთან ცოტა უფრო კეთილი იყო.</p>
+<div class="signature">— და თუ დღეს ეს საიტი ერთხელ მაინც გაგაღიმებს, მისია შესრულებულია. ♡</div>
+<button class="top-btn" onclick="scrollTo({top:0,behavior:'smooth'})">↟ თავიდან წავიკითხოთ</button>
+</div>
+</section>
+</main>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
